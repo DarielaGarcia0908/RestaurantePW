@@ -4,35 +4,90 @@
 <head>
     <title>SuperTaco</title>
     <link href="~/StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="btn-menu">
+                <label for="btn-menu">☰
+                 
+                </label>
+            </div>
+            
+            <nav class="menu">
+                <a href="~/">Inicio</a>
+                <a href="#">Iniciar sesión</a>
+                @*<a href="#">Blog</a>
+                <a href="#">Contacto</a>*@
+            </nav>
+        </div>
+        <div class="logo">
 
-    <header class="Tituloosm">
-        <div class="barra">
-            <h2>Menu<img src="~/images/burguer.png" alt=""></h2>
-
-            <ul>
-                <li>
-                    <a href="~/">Principal</a>
-                    @foreach (var item in menu.Get())
-                    {
-                        <a href="~/@(item.Nombre)">@item.Nombre</a>
-                    }
-                </li>
-                  </ul>
+            <h1>
+                SUPER TACO
+            </h1>
 
         </div>
+   
     </header>
-    @* <header></header>
-    <nav>
-    <a href="~/">Principal</a>
-    @foreach(var item in menu.Get())
-    {
-    <a href="~/@(item.Nombre)">@item.Nombre</a>
-    }
-    </nav>*@
+    <div class="capa"></div>
+    <!--	--------------->
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+        <div class="cont-menu">
+            <nav>
+                <a id="menu" >Menú</a>
+                @foreach (var item in menu.Get())
+                {
+                    <a href="~/@(item.Nombre)">@item.Nombre</a>
+                }
+            </nav>
+            <label for="btn-menu">✖️</label>
+        </div>
+    </div>
+  
     <main>
         @RenderBody()
     </main>
+    <!--FOOTER-->
+    <footer>
+        <div class="top_header">
+            <section>
+                <span><i class="fa fa-map-marker"></i></span>
+                <span>Calle Puebla #1735, Colonia Zaragoza, Nueva Rosita, Coahuila, pincode</span>
+            </section>
+            <section>
+                <span><i class="fa fa-phone"></i></span>
+                <span>(+52) 864 103 8857</span>
+            </section>
+            <section>
+                <span><i class="fa fa-envelope"></i></span>
+                <span>supertaco@gmail.com</span>
+            </section>
+        </div>
+        <span class="border-shape"></span>
+        <div class="bottom_content">
+            <section>
+                <a href="https://es-la.facebook.com/Supertaco2001/"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-whatsapp"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </section>
+            <section>
+                <a href="~/">Inicio</a>
+                @*<a href="#">About us</a>
+                <a href="#">Order</a>
+                <a href="#">Retail</a>
+                <a href="#">Member</a>
+                <a href="#">Contact Us</a>*@
+            </section>
+        </div>
+        <div class="copyright">
+            Copyright © 2022 Super Taco - All rights reserved
+        </div>
+    </footer>
+    <!--End Footer-->
 </body>
 </html>
