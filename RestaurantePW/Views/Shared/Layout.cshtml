@@ -18,7 +18,7 @@
             
             <nav class="menu">
                 <a href="~/">Inicio</a>
-                <a href="#">Iniciar sesión</a>
+                <a href="~/Home/IniciarSesion">Iniciar sesión</a>
                 @*<a href="#">Blog</a>
                 <a href="#">Contacto</a>*@
             </nav>
@@ -41,7 +41,7 @@
                 <a id="menu" >Menú</a>
                 @foreach (var item in menu.Get())
                 {
-                    <a href="~/@(item.Nombre)">@item.Nombre</a>
+                    <a href="~/c/@(item.Nombre)">@item.Nombre</a>
                 }
             </nav>
             <label for="btn-menu">✖️</label>

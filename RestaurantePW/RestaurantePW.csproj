@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Areas\" />
     <Folder Include="Views\NewFolder\" />
   </ItemGroup>

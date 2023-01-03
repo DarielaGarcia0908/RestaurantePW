@@ -1,0 +1,32 @@
+﻿@model RestaurantePW.Models.ViewModels.CategoriaViewModel
+@{
+    Layout = "Layout";
+}
+
+<h1 id="nombreCategoria">@Model.NombreCategoria</h1>
+
+
+<div class="productos">
+    @if (Model.Platillos != null)
+    {
+        @foreach (var item in Model.Platillos)
+        {
+            @if (item.Nombre != null)
+            {
+                <a href="~/p/@(item.Nombre.Replace(" ","-"))">
+                    <div>
+                        <img src="~/img_platillos/@(item.Id).jpg" />
+                    </div>
+                    <h2>@item.Nombre</h2>
+                    @if (item.Precio != null)
+                    {
+                        <h3>@item.Precio.Value.ToString("c")</h3>
+                    }
+                </a>
+            }
+        }
+    }
+</div>
+
+
+

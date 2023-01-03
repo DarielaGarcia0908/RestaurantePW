@@ -266,11 +266,10 @@ a {
 /*FOOTER*/
 footer {
     width: 100%;
-    margin-top: 100%;
+   margin-top:80%;
     background-color: #1c1c1c;
-    
     color: #fff;
-    position: page;
+    position: page sticky;
 }
 
 .top_header {
