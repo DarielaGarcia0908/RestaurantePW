@@ -1,0 +1,38 @@
+﻿@using RestaurantePW.Services
+@inject MenuService menu
+<html>
+<head>
+    <title>SuperTaco</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header class="Tituloosm">
+        <div class="barra">
+            <h2>Menu<img src="~/images/burguer.png" alt=""></h2>
+
+            <ul>
+                <li>
+                    <a href="~/">Principal</a>
+                    @foreach (var item in menu.Get())
+                    {
+                        <a href="~/@(item.Nombre)">@item.Nombre</a>
+                    }
+                </li>
+                  </ul>
+
+        </div>
+    </header>
+    @* <header></header>
+    <nav>
+    <a href="~/">Principal</a>
+    @foreach(var item in menu.Get())
+    {
+    <a href="~/@(item.Nombre)">@item.Nombre</a>
+    }
+    </nav>*@
+    <main>
+        @RenderBody()
+    </main>
+</body>
+</html>
