@@ -1,0 +1,49 @@
+﻿@model RestaurantePW.Areas.Administrador.Models.IndexPlatillosVM
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "LayoutAdmin";
+}
+
+<h1>Administrar Productos</h1>
+
+<section class="listado">
+    <form method="post" action="~/administrador/platillos/index">
+        <select onchange="this.form.submit()" asp-for="IdCategoria" asp-items="@(new SelectList(Model.Categorias,"Id","Nombre"))">
+            <option selected="selected" value="">Ver todos los platillos</option>
+        </select>
+    </form>
+    <a id="lnkNueva" class="mark" href="~/Administrador/Platillos/Agregar">
+        <h1>Nuevo Platillo...</h1>
+        <h2></h2>
+        <h2></h2>
+        <h2></h2>
+        <div class="image">
+            <img src="~/images/addb.png" />
+        </div>
+        <h2></h2>
+        <h2></h2>
+        <div class="botones">
+            <img src="~/images/add.png" />
+        </div>
+    </a>
+
+    @if (Model.Platillos!=null)
+    {
+        @foreach (var item in Model.Platillos)
+        {
+            <div class="card">
+                <h1>@item.Nombre</h1>
+                <h2>Tipo: @item.IdCategoriaNavigation?.Nombre</h2>
+                <h2>Precio: @item.Precio??.Value.ToString("c")</h2>
+                <h2 title="@item.Descripcion">Descripción: @item.Descripcion</h2>
+                <div class="image">
+                    <img src="~/img_platillos/@(item.Id).jpg" />
+                </div>
+                <div class="botones">
+                    <a href="~/Administrador/Platillos/Editar/@(item.Id)" class="btnEditar"></a>
+                    <a href="~/Administrador/Platillos/Eliminar/@(item.Id)" class="btnBorrar"></a>
+                </div>
+            </div>
+        }
+    }
+</section>
