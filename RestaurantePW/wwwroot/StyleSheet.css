@@ -363,7 +363,28 @@ footer .bottom_content section {
         }
 }
 
+header {
+    height: 150px;
+    background: url(images/restaurante.jpeg) no-repeat;
+    margin: 0 20px 0 0;
+}
 
+nav {
+    background: green;
+    min-height: 30px;
+    padding: 5px 0px;
+}
+
+    nav a {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        line-height: 30px;
+        margin: 0 10px;
+        font-family: Arial;
+        font-weight: bold;
+    }
 
 
 .productos a {

@@ -15,7 +15,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 //Scoped - No recuerdo
 builder.Services.AddTransient<MenuService>();
 builder.Services.AddDbContext<supertacoContext>(
-    optionsBuilder => optionsBuilder.UseMySql("server=localhost;password=root;user=root;database=supertaco", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.27-mysql"))
+    optionsBuilder => optionsBuilder.UseMySql("server=SuperTaco.sistemas19.com;password=sistemas_19;user=sistem21_Dariela;database=sistem21_supertaco", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.27-mysql"))
     );
 builder.Services.AddMvc();
 var app = builder.Build();

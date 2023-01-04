@@ -63,7 +63,7 @@ namespace RestaurantePW.Controllers
         [HttpPost]
         public IActionResult IniciarSesion(Login login)
         {
-            if (login.UserName == "sistemas" && login.Password == "72G")
+            if (login.UserName == "Dariela" && login.Password == "judith")
             {
                 //Para acceder hay que hacer las siguientes 3 etapas
                 //Crear claims
@@ -74,7 +74,7 @@ namespace RestaurantePW.Controllers
                 {
                     new Claim("Id","5"),
                     new Claim("Carrera","Sistemas"),
-                    new Claim(ClaimTypes.Name,"Juan Perez"),
+                    new Claim(ClaimTypes.Name,"Dariela"),
                     new Claim(ClaimTypes.Role,"Administrador") //Esto es para la impersonalizacion
 
                 };
