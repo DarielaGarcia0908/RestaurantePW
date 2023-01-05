@@ -1,0 +1,60 @@
+﻿@model PlatillosViewModel
+@{
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h1>Editar</h1>
+
+
+<form method="post" action="~/administrador/platillos/editar" enctype="multipart/form-data">
+    <div>
+        <h1>Editar Producto</h1>
+
+        <input type="hidden" id="idProducto" asp-for="Platillo.Id" />
+
+        <label>Nombre:</label>
+        <input type="text" id="txtNombre" required="required" asp-for="Platillo.Nombre" />
+
+        <label>Categoría:</label>
+        <select id="cmbCategoria" required="required" asp-for="Platillo.IdCategoria"
+                asp-items="@(new SelectList(Model.Categorias,"Id","Nombre"))">
+            <option selected="selected" value="">-- Seleccionar categoria --</option>
+        </select>
+        <label>Precio:</label>
+        <input type="number" id="txtPrecio" required="required" step="0.01" min="0.1" asp-for="Platillo.Precio" />
+
+        <label>Descripción</label>
+        <textarea rows="2" cols="20" id="txtDescripcion" required="required" asp-for="Platillo.Descripcion">
+</textarea>
+
+        <label>Imagen:</label>
+        <input type="file" id="fileUpload1" accept="image/jpg" asp-for="Imagen" />
+
+        <img id="imagePreview" src="~/img_platillos/@(Model.Platillo?.Id).jpg" alt="Vista previa de la imagen" />
+
+        <div class="botones">
+            <p id="error"> @Html.ValidationSummary()</p>
+            <input type="submit" value="Guardar" id="btnGuardar" />
+            <a href="~/administrador/platillos"> <input type="button" value="Cancelar" id="btnCancelar" formnovalidate="formnovalidate" /></a>
+        </div>
+    </div>
+</form>
+<script>
+    function mostrarImagen(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#imagePreview').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+    $(document).ready(function () {
+        $("#fileUpload1").change(function () {
+            mostrarImagen(this);
+        });
+    });
+
+</script>

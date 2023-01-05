@@ -38,6 +38,8 @@ namespace RestaurantePW.Areas.Administrador.Controllers
                 context.SaveChanges();
                 return RedirectToAction("Index");
             }
+           
+
             return View(c);
         }
         //GET
