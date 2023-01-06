@@ -2,10 +2,57 @@
     margin: 0;
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
-    
-    background-color: white;
+    background-color:whitesmoke;
+}
+#aboutus {
+    font-family:'Brush Script MT';
+    font-size:60px;
+    color:#c27c0d;
+    position:center;
+    text-align:center;
+    margin-bottom:10px;
+}
+#logo {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 70px;
+    color: black;
+    position: center;
+    text-align: center;
+    margin-top: 50px;
 }
 
+.fotosmain .galeria{
+    float:left;
+    height:500px;
+    width:500px;
+    margin-inline-start:30px;
+}
+.fotosmain {
+    padding-block: 20px;
+    display: block;
+    margin-block-start: 90px;
+    margin-inline-start: 20px;
+    position: page;
+    background-color: white;
+    height: 540px;
+}
+.textomain {
+    font-size: 35px;
+    height: 520px;
+   border:thick;
+    margin-inline-start: 50px;
+    margin-inline-end: 50px;
+   padding-top:10px;
+    background-color:white;
+    padding:10px;
+}
+#pruebaimagen {
+    float: left;
+    height:500px;
+    margin-inline-end:50px;
+
+    
+}
 .capa {
     position: fixed;
     width: 100%;
@@ -18,17 +65,19 @@
 /*Estilos para el encabezado*/
 .header {
     width: 100%;
-    height: 300px;
+    height: 100px;
     top: 0;
     left: 0;
     background-size: cover;
-    background: url(images/header7.png);
+   background-color:black;
+    /*background: url(images/header7.png);*/
     image-rendering: optimizeQuality;
 }
 
 .container {
     width: 100%;
     position: page;
+    
     
 }
 
@@ -39,9 +88,9 @@
         line-height: 100px;
     }
 
-
+    
         .container .btn-menu label {
-            color: #fff;
+            color: white;
             font-size: 35px;
             cursor: pointer;
             line-height: 100px;
@@ -60,16 +109,7 @@
             font-family: 'Times New Roman', Times, serif;
         }
 
-    /* .logo h2 {
-            color: #a96700;
-            font-weight: 400;
-            font-size: 60px;
-            margin-left: 500px;
-            padding-top: 70px;
-            font-family:'Brush Script MT';
-        }*/
-
-
+  
     .container .menu {
         float: right;
         line-height: 100px;
@@ -83,7 +123,7 @@
             color: #fff;
             transition: all 0.3s ease;
             border-bottom: 2px solid transparent;
-            font-size: 18px;
+            font-size: 20px;
             margin-right: 5px;
             position: page;
            
@@ -182,14 +222,6 @@
 }
 /*Fin de Menù lateral*/
 
-/*footer {
-    background: #55ab00;
-    height: 15px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-*/
 
 
 /*Start Footer*/
@@ -199,13 +231,7 @@
     box-sizing: border-box;
 }
 
-/*body {
-    margin: 0;
-    overflow-x: hidden !important;
-    box-sizing: border-box;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-*/
+
 
 a {
     text-decoration: none;
@@ -256,17 +282,10 @@ a {
 
 
 
-
-
-
-
-
-
-
 /*FOOTER*/
 footer {
     width: 100%;
-   margin-top:80%;
+   margin-top:70%;
     background-color: #1c1c1c;
     color: #fff;
     position: page sticky;
@@ -293,7 +312,7 @@ footer {
 
     .top_header .fa {
         color: #ffbe00;
-        font-size: 35px;
+        font-size: 40px;
     }
 
 footer .border-shape {
@@ -357,25 +376,25 @@ footer .bottom_content section {
 
         footer .bottom_content section a {
             padding: 1rem;
-            font-size: 12px;
+            font-size: 15px;
             margin: 0 5px;
             display: inline-block;
         }
 }
 
-header {
+.hadmin {
     height: 150px;
     background: url(images/restaurante.jpeg) no-repeat;
     margin: 0 20px 0 0;
 }
 
-nav {
+.nav {
     background: green;
     min-height: 30px;
     padding: 5px 0px;
 }
 
-    nav a {
+    .nav a {
         display: inline-block;
         color: white;
         text-decoration: none;
