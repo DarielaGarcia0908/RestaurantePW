@@ -4,8 +4,6 @@
     Layout = "LayoutAdmin";
 }
 
-<h1>Administrar Productos</h1>
-
 <section class="listado">
     <form method="post" action="~/administrador/platillos/index">
         <select class="platillos" onchange="this.form.submit()" asp-for="IdCategoria" asp-items="@(new SelectList(Model.Categorias,"Id","Nombre"))">

@@ -7,16 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\EstilosLogin.css" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Areas\Administrador\Data\" />
     <Folder Include="Views\NewFolder\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\EstilosLogin.css" />
   </ItemGroup>
 
   <ItemGroup>

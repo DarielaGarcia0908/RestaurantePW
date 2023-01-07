@@ -3,20 +3,79 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-   
+    <title>SuperTaco</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="~/StyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Iconos-->
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-   @* <header class="hadmin"></header>*@
-    <nav class="nav">
-        <a href="~/Administrador">Principal</a>
-        <a href="~/Administrador/Categorias">Administrar Categorias</a>
-        <a href="~/Administrador/Platillos">Administrar Platillos</a>
-        <a href="~/Home/CerrarSesion">Cerrar Sesion</a>
-    </nav>
-    <main>
-      @*  <p>Bienvenido @User.Identity?.Name (@User.Claims.FirstOrDefault(x=>x.Type=="Carrera")?.Value</p>*@
+    @* <header class="hadmin"></header>*@
+    @*  <nav class="nav">
+    <a href="~/Administrador">Principal</a>
+    <a href="~/Administrador/Categorias">Administrar Categorias</a>
+    <a href="~/Administrador/Platillos">Administrar Platillos</a>
+    <a href="~/Home/CerrarSesion">Cerrar Sesion</a>
+    </nav>*@
+    <header class="headerr">
+        <div class="logo">
+            SUPER TACO
+        </div>
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"> <img src="~/images/micon.png" class="menu" alt="menu" /> </label>
+
+        <nav class="navigation">
+            <ul>
+                <li>
+                    <a href="~/Administrador">Principal</a>     
+                </li>
+                <li>
+                    <a href="~/Administrador/Categorias">Administrar Categorias</a>
+                </li>
+                <li>
+                    <a href="~/Administrador/Platillos">Administrar Platillos</a>
+                </li>
+                <li>
+                    <a href="~/Home/CerrarSesion">Cerrar Sesion</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="heroadmin"></div>
+
+    <main class="mainuser">
+        @*  <p>Bienvenido @User.Identity?.Name (@User.Claims.FirstOrDefault(x=>x.Type=="Carrera")?.Value</p>*@
         @RenderBody()
     </main>
+    <!--FOOTER-->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="~/">
+                        <img  src="~/images/sticon.png" alt="Logo">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Nos ubicamos en Calle Puebla #1735, Colonia Zaragoza, Nueva Rosita, Coahuila.</p>
+                <p>Nuestro número de telefono es +528447397021</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="https://es-la.facebook.com/Supertaco2001/" class="fa fa-facebook"></a>
+                    <a href="https://goo.gl/maps/gb8tYKsuBid9a8bF9" class="fa fa-map-marker"></a>
+                    <a href="tel:+52 844 739 70 21" class="fa fa-whatsapp"></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2022 <b>Super Taco</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
 </body>
 </html>
