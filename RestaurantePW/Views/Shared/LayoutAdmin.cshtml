@@ -3,11 +3,11 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Super Taco</title>
+   
     <link href="~/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-    <header class="hadmin"></header>
+   @* <header class="hadmin"></header>*@
     <nav class="nav">
         <a href="~/Administrador">Principal</a>
         <a href="~/Administrador/Categorias">Administrar Categorias</a>
@@ -15,7 +15,7 @@
         <a href="~/Home/CerrarSesion">Cerrar Sesion</a>
     </nav>
     <main>
-        <p>Bienvenido @User.Identity?.Name (@User.Claims.FirstOrDefault(x=>x.Type=="Carrera")?.Value</p>
+      @*  <p>Bienvenido @User.Identity?.Name (@User.Claims.FirstOrDefault(x=>x.Type=="Carrera")?.Value</p>*@
         @RenderBody()
     </main>
 </body>

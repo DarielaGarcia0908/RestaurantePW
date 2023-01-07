@@ -63,7 +63,7 @@ namespace RestaurantePW.Controllers
         [HttpPost]
         public IActionResult IniciarSesion(Login login)
         {
-            if (login.UserName == "Dariela" && login.Password == "judith")
+            if (login.UserName == "Administrador" && login.Password == "4dmin1")
             {
                 //Para acceder hay que hacer las siguientes 3 etapas
                 //Crear claims
